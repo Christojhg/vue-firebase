@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="principal">
-    <span>App</span>
+    <span>{{titulo}}</span>
     <entrada />
   </div>
 </template>
@@ -8,7 +8,14 @@
 <script>
 import Entrada from '@/views/Entrada.vue'
 export default{
-  components:{Entrada}
+  components:{Entrada},
+  name:'apa',
+  data(){
+    return{
+      titulo:'Entradas'
+    }
+  }
+
 }
 </script>
 
