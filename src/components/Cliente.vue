@@ -4,6 +4,12 @@
 		<span>{{nombreCompleto}}</span>
 	</div>
 	<div class="atributo">
+		<img v-bind:src="fotoPerfil">
+	</div>
+	<div class="atributo">
+		<a v-bind:href="biografia" target="_blank">Biografia</a>
+	</div>
+	<div class="atributo">
 		<span>Edad : {{edad}}</span>
 	</div>
 </div>
@@ -15,7 +21,9 @@ export default{
 		return{
 			nombres:"Issac",
 			apellidos:'Newton',
-			fechaNacimiento:new Date(1994,9,27)
+			fechaNacimiento:new Date(1994,9,27),
+			fotoPerfil:'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Sir_Isaac_Newton_%281643-1727%29.jpg/220px-Sir_Isaac_Newton_%281643-1727%29.jpg',
+			biografia:'https://es.wikipedia.org/wiki/Isaac_Newton'
 		}
 	},
 	computed:{
@@ -23,8 +31,13 @@ export default{
 			return `${this.nombres} ${this.apellidos}`
 		},
 		edad(){
+			return this.calcularEdad(this.fechaNacimiento)
+		}
+	},
+	methods:{
+		calcularEdad(fecha){
 			let fechaActual=new Date()
-			let diferencia = fechaActual - this.fechaNacimiento
+			let diferencia = fechaActual - fecha
 			return Math.floor(diferencia/(1000*60*60*24*365))
 		}
 	}
@@ -42,5 +55,9 @@ export default{
 	}
 	.atributo{
 		margin:10px;
+	}
+	a{
+		text-decoration: none;
+		color:#553f75;
 	}
 </style>
