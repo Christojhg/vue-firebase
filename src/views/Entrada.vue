@@ -2,14 +2,16 @@
 <div class="anuncio">
 	<anuncio/>
 	<cliente/>
+	<boletos/>
 </div>
 </template>
 
 <script>
 import Cliente from '@/components/Cliente.vue'
 import Anuncio from '@/components/Anuncio.vue'
+import Boletos from '@/components/Boletos.vue'
 export default{
-  components:{cliente:Cliente,Anuncio:Anuncio}
+  components:{cliente:Cliente,Anuncio:Anuncio,Boletos}
 }
 </script>
 
@@ -26,4 +28,17 @@ export default{
 	border-bottom-width: 1px;
 	border-bottom-style:solid;
 }
+
+.section{
+	font-size:2.4rem;
+	color:#202020;
+	background-color:#e9e9e9;
+	border-radius:5px;
+	margin:10px;
+}
+.atributo{
+	margin:10px;
+}
+
+
 </style>
