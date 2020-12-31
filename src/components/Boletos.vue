@@ -4,8 +4,8 @@
             <span class="boletos">{{boletos}}</span>
         </div>
         <div class="atributo">
-            <button v-on:click="actualizarCantidad(1)">+</button>
-            <button v-on:click="actualizarCantidad(-1)">-</button>
+            <button @click="actualizarCantidad(1)">+</button>
+            <button @click="actualizarCantidad(-1)">-</button>
         </div>
     </div>
 </template>

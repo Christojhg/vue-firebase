@@ -2,7 +2,10 @@
 <div class="anuncio">
 	<anuncio/>
 	<cliente/>
+	<email/>
 	<boletos/>
+	<firma/>
+	
 </div>
 </template>
 
@@ -10,8 +13,11 @@
 import Cliente from '@/components/Cliente.vue'
 import Anuncio from '@/components/Anuncio.vue'
 import Boletos from '@/components/Boletos.vue'
+import Firma from '@/components/Firma.vue'
+import Email from '@/components/Email.vue'
+
 export default{
-  components:{cliente:Cliente,Anuncio:Anuncio,Boletos}
+  components:{cliente:Cliente,Anuncio:Anuncio,Boletos,Firma,Email}
 }
 </script>
 
