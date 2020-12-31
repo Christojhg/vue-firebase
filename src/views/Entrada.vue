@@ -1,11 +1,10 @@
 <template>
 <div class="anuncio">
-	<anuncio/>
-	<cliente/>
-	<email/>
-	<boletos/>
-	<firma/>
-	
+	<anuncio />
+	<cliente :email="email" @onCambioEmail="actualizarEmail"/>
+	<email :emailRecibido="email" @onCambioEmail="actualizarEmail"/>
+	<firma />
+	<boletos />
 </div>
 </template>
 
@@ -17,7 +16,18 @@ import Firma from '@/components/Firma.vue'
 import Email from '@/components/Email.vue'
 
 export default{
-  components:{cliente:Cliente,Anuncio:Anuncio,Boletos,Firma,Email}
+  components:{ Cliente,Anuncio,Boletos,Firma,Email},
+  data(){
+	return{
+		email:''	
+	}
+	},
+	methods:{
+		actualizarEmail(email){
+			this.email=email
+		}
+	}
+
 }
 </script>
 
