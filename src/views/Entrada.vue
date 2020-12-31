@@ -2,9 +2,10 @@
 <div class="anuncio">
 	<anuncio />
 	<cliente :email="email" @onCambioEmail="actualizarEmail"/>
+	<boletos />
 	<email :emailRecibido="email" @onCambioEmail="actualizarEmail"/>
 	<firma />
-	<boletos />
+	
 </div>
 </template>
 

@@ -20,9 +20,10 @@ export default {
             this.$emit('onCambioEmail',this.email)
         }
     },
-    
-    created(){
-        this.email=this.emailRecibido
+    watch:{
+        emailRecibido(){
+            this.email=this.emailRecibido
+        }
     }
 }
 </script>
